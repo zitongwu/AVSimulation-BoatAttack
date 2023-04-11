@@ -42,7 +42,7 @@ MonoBehaviour:
   m_ShadowDepthBias: 0.75
   m_ShadowNormalBias: 0.75
   m_SoftShadowsSupported: 1
-  m_UseSRPBatcher: 1
+  m_UseSRPBatcher: 0
   m_SupportsDynamicBatching: 0
   m_MixedLightingSupported: 1
   m_DebugLevel: 0
@@ -55,4 +55,5 @@ MonoBehaviour:
   m_MaxPixelLights: 0
   m_ShadowAtlasResolution: 256
   m_ShaderVariantLogLevel: 0
+  m_VolumeFrameworkUpdateMode: 0
   m_ShadowCascades: 2

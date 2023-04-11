@@ -81,7 +81,7 @@ public class ShaderSwitch : MonoBehaviour
         foreach (var r in renderers)
         {
             // Update MaterialPropertyBlock
-            //m_propertyBlock.SetColor("_BaseColor", TagsManager.GetColor(r.gameObject.tag));
+            m_propertyBlock.SetColor("_BaseColor", TagsManager.GetColor(r.gameObject.tag));
             r.SetPropertyBlock(m_propertyBlock);
 
             r.material = m_SegmentationMaterial;

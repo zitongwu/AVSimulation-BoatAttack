@@ -19,6 +19,7 @@ public class Lidar3 : MonoBehaviour
     public int col = 180;
     [HideInInspector]
     public Instancer instancer;
+    public bool drawLidar = true;
 
 
 
@@ -57,7 +58,7 @@ public class Lidar3 : MonoBehaviour
 
                     // Raycast and build matrix for batching
                     RaycastHit hit;
-                    if (Physics.Raycast(origin.position, dir, out hit, 100))
+                    if (drawLidar && Physics.Raycast(origin.position, dir, out hit, 100))
                     {
                         if (AddedMatricies >= 1023 || batches.Count == 0)
                         {

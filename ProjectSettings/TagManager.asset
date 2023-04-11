@@ -12,6 +12,13 @@ TagManager:
   - volume_manager
   - benchmark_flythrough
   - console_canvas
+  - water
+  - terrain
+  - ship
+  - buoy
+  - dock
+  - prop
+  - SegmentationCamera
   layers:
   - Default
   - TransparentFX

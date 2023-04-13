@@ -20,6 +20,5 @@ via Git:
 Main Scene:
  - `scenes/simulation/simulation_island.unity` - Starting menu scene if you want to have a full play-through of the demo.
  
- 
 #### 
 Project structure: all simulator-related scripts, models, materials, and shaders are put under the simulator subfolder of the corresponding folder

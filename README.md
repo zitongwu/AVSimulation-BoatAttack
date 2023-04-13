@@ -1,6 +1,7 @@
 **_Note:This repository uses GitLFS, to use this repo you need to pull via Git and make sure GitLFS is installed locally_**
 
-** This is a marine autonomous vehicle simulator built on top of a fork of Unity Technologies' BoatAttack Project https://github.com/Unity-Technologies/BoatAttack
+# Credit
+This is a marine autonomous vehicle simulator built on top of a fork of Unity Technologies' BoatAttack Project https://github.com/Unity-Technologies/BoatAttack
 
 
 # Features

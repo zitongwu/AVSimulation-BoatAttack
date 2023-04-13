@@ -3,9 +3,10 @@
 *** This is a marine autonomous vehicle simulator built on top of a fork of Unity Technologies' BoatAttack Project https://github.com/Unity-Technologies/BoatAttack
 
 
-**Project Features**:
+# Features
   * Lidar sensor: support 35000 lidar points at 130 fps
-  * 
+  * Semantic Segmentation of objects by tags
+  * UX for creating ships and drawing navigation route for it at runtime
 
 # Usage
 

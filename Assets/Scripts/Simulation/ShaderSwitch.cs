@@ -29,7 +29,7 @@ public class ShaderSwitch : MonoBehaviour
     void Update()
     {
         // Segmentation view
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.U))
         {
             UpdateSettings(true);
         }

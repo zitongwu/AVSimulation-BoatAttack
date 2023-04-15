@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class DrawLines : MonoBehaviour
 {
 
     bool enterPressed = false;
-    public Camera perspectiveCam;
-    public Camera orthographicCam;
+    public Camera perspectiveMainCamera;
+    public Camera perspectiveTopCamera;
+    public Camera orthographicTopCamera;
     Camera currentCam;
     bool drawLineMode = false;
     LineRenderer lr;
@@ -17,7 +17,7 @@ public class DrawLines : MonoBehaviour
     Vector3 pos;
     Vector3 previousPos;
     List<Vector3> linePositions;
-    float minimumDistance = 0.1f;
+    float minimumDistance = 10f;
     public Material mat;
     public GameObject canvas;
     public GameObject[] prefabs;
@@ -30,9 +30,10 @@ public class DrawLines : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        perspectiveCam.enabled = true;
-        orthographicCam.enabled = false;
-        currentCam = perspectiveCam;
+        perspectiveMainCamera.enabled = true;
+        perspectiveTopCamera.enabled = false;
+        orthographicTopCamera.enabled = false;
+        currentCam = perspectiveMainCamera;
         canvas.SetActive(false);
     }
 
@@ -41,11 +42,16 @@ public class DrawLines : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            perspectiveCam.enabled = !perspectiveCam.enabled;
-            orthographicCam.enabled = !orthographicCam.enabled;
-            currentCam = (currentCam == perspectiveCam) ? orthographicCam : perspectiveCam;
+            perspectiveMainCamera.enabled = !perspectiveMainCamera.enabled;
+            orthographicTopCamera.enabled = !orthographicTopCamera.enabled;
+            perspectiveTopCamera.enabled = !perspectiveTopCamera.enabled;
+            currentCam = (currentCam == perspectiveMainCamera) ? orthographicTopCamera : perspectiveMainCamera;
+            perspectiveMainCamera.gameObject.tag = (perspectiveMainCamera.gameObject.tag == "MainCamera") ? "Untagged" : "MainCamera";
+            perspectiveTopCamera.gameObject.tag = (perspectiveTopCamera.gameObject.tag == "MainCamera") ? "Untagged" : "MainCamera";
+            Debug.Log(currentCam);
             enterPressed = !enterPressed;
             canvas.SetActive(!canvas.activeSelf);
+            RenderSettings.fog = !RenderSettings.fog;
 
             if (!enterPressed)
             {
@@ -56,6 +62,7 @@ public class DrawLines : MonoBehaviour
 
         if (drawLineMode)
         {
+            Debug.Log("here");
             if (Input.GetMouseButtonDown(0))
             {
                 InstantiateObject();
@@ -101,13 +108,13 @@ public class DrawLines : MonoBehaviour
 
     void InstantiateObject()
     {
-        newObj = Instantiate(selectedPrefab, selectedPrefab.transform.position, Quaternion.identity);
+        newObj = Instantiate(selectedPrefab, selectedPrefab.transform.position, selectedPrefab.transform.rotation);
         newObj.transform.parent = this.transform;
         newObj.AddComponent<LineRenderer>();
         lr = newObj.GetComponent<LineRenderer>();
         lr.material = mat;
-        //lr.SetColors(c1, c2);
-        lr.SetWidth(0.05f, 0.05f);
+        lr.SetColors(c1, c2);
+        lr.SetWidth(5f, 5f);
         linePositions = new List<Vector3>();
         lr.positionCount = linePositions.Count;
         lr.SetPositions(linePositions.ToArray());
@@ -118,6 +125,7 @@ public class DrawLines : MonoBehaviour
     {
         selectedPrefab = prefabs[i];
         drawLineMode = true;
+        Debug.Log(true);
     }
 
 

@@ -6,15 +6,14 @@ public class Navigation : MonoBehaviour
 {
 
 
-    int index = 0;
-    public float moveSpeed = 10f;
-    public float rotateSpeed = 100f;
+    int index = 1;
+    public float moveSpeed = 5f;
+    public float rotateSpeed = 20f;
     float angleEps = 0.1f;
     float distanceEps = 0.1f;
     int increment = 1;
     [HideInInspector]
     public Vector3[] wayPoints;
-    int pointsTravelled = 0;
     bool move = false;
 
     void Start()
@@ -37,28 +36,25 @@ public class Navigation : MonoBehaviour
             {
                 if (index == wayPoints.Length - 1)
                 {
-                    move = false;
                     increment = -1;
                 }
                 else if (index == 0)
                 {
-                    move = false;
                     increment = 1;
                 }
 
                 index += increment;
+                move = false;
 
             }
         }
 
         else
         {
-            Debug.Log("rotate");
             Vector3 targetDirection = wayPoints[index] - transform.position;
             if (Vector3.Angle(transform.forward, targetDirection) <= angleEps)
             {
                 move = true;
-                pointsTravelled = 0;
 
             }
             else

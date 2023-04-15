@@ -24,8 +24,8 @@ public class DrawLines : MonoBehaviour
     GameObject selectedPrefab;
     GameObject newObj;
     bool newObjInstantiated = false;
-    Color c1 = new Color(1, 0, 0, 0.5f);
-    Color c2 = new Color(1, 0, 0, 0.5f);
+    Color c1 = new Color(1, 1, 1, 0.5f);
+    Color c2 = new Color(1, 1, 1, 0.5f);
 
     // Start is called before the first frame update
     void Start()

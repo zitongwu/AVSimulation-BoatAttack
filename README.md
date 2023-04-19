@@ -1,4 +1,5 @@
 **_Note:This repository uses GitLFS, to use this repo you need to pull via Git and make sure GitLFS is installed locally_**
+<img width="1350" alt="screenshot1" src="https://user-images.githubusercontent.com/71951467/233218947-7ca618ad-3f3d-4ea2-91e1-7c352e0d4b4e.png">
 
 # Credit
 This is a marine autonomous vehicle simulator built on top of a fork of Unity Technologies' BoatAttack Project https://github.com/Unity-Technologies/BoatAttack
@@ -22,3 +23,4 @@ Scene:
  
 ### 
 Project structure: all simulation related scripts, models, materials, and shaders are put under the simulator subfolder of the corresponding folder
+

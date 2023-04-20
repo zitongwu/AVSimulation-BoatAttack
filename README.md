@@ -2,8 +2,8 @@
 <img width="1333" alt="martime1" src="https://user-images.githubusercontent.com/71951467/233219047-29aa19f2-b1c3-4c3f-99e7-fe6726e32858.png">
 
 <img width="1352" alt="screenshot3" src="https://user-images.githubusercontent.com/71951467/233447944-fa8ef681-2ab3-4f1c-8408-2c3cd6428cd6.png">
+<img width="1352" alt="Screenshot 2023-04-20 at 10 58 11 AM" src="https://user-images.githubusercontent.com/71951467/233449772-e756c0da-8d73-4d2b-81c9-02c72499e9bc.png">
 
-<img width="1347" alt="Screenshot 2023-04-20 at 10 49 42 AM" src="https://user-images.githubusercontent.com/71951467/233447862-7a7de4ba-6e7e-4c69-8b66-1e9c8c92d94b.png">
 
 # Credit
 This is a marine autonomous vehicle simulator built on top of a fork of Unity Technologies' BoatAttack Project https://github.com/Unity-Technologies/BoatAttack

@@ -14,7 +14,7 @@ public class USVController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey("up"))
         {
             transform.position += transform.up * m_Speed * Time.deltaTime;
         }

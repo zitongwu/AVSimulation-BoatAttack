@@ -9738,7 +9738,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: d84597acd7ada4ababbf75fc492460d5, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9797,9 +9796,9 @@ GameObject:
   - component: {fileID: 8974694563192370115}
   - component: {fileID: 8474289352248162271}
   - component: {fileID: 8846089577575941416}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Geo_Props_WindSurfer_LOD1
-  m_TagString: Untagged
+  m_TagString: prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9909,9 +9908,9 @@ GameObject:
   - component: {fileID: 5752799900009478651}
   - component: {fileID: 8408722718294511566}
   - component: {fileID: 6919806500491071947}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Geo_Props_WindSurfer_LOD0
-  m_TagString: Untagged
+  m_TagString: prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

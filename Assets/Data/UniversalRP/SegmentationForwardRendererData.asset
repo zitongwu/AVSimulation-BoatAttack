@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1517925226470008383
+--- !u!114 &-8496413445198814287
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
-  m_Name: WaterSegmentation
+  m_Name: TerrainSegmentation
   m_EditorClassIdentifier: 
-  m_Active: 0
+  m_Active: 1
   settings:
-    passTag: WaterSegmentation
+    passTag: TerrainSegmentation
     Event: 300
     filterSettings:
       RenderQueueType: 0
       LayerMask:
         serializedVersion: 2
-        m_Bits: 262144
+        m_Bits: 1024
       PassNames: []
-    overrideMaterial: {fileID: 2100000, guid: f842fe9dae7d64e7ab0e0a0de5d56cad, type: 2}
+    overrideMaterial: {fileID: 2100000, guid: d5b7b9fa95fba4664ae43488aa20c4c7, type: 2}
     overrideMaterialPassIndex: 0
-    overrideDepthState: 1
+    overrideDepthState: 0
     depthCompareFunction: 4
     enableWrite: 1
     stencilSettings:
@@ -53,8 +53,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RendererFeatures:
   - {fileID: 932158238485617729}
-  - {fileID: -1517925226470008383}
-  m_RendererFeatureMap: 419c63a7fab0ef0cc199a6800c3fefea
+  - {fileID: 2563817713350259566}
+  - {fileID: -8496413445198814287}
+  m_RendererFeatureMap: 419c63a7fab0ef0c6eb31869a0829423b16312cefcac168a
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   shaders:
@@ -70,10 +71,10 @@ MonoBehaviour:
     materialErrorPS: {fileID: 4800000, guid: 5fd9a8feb75a4b5894c241777f519d4e, type: 3}
   m_OpaqueLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 262144
   m_TransparentLayerMask:
     serializedVersion: 2
-    m_Bits: 131072
+    m_Bits: 393216
   m_DefaultStencilState:
     overrideStencilState: 0
     stencilReference: 0
@@ -99,12 +100,12 @@ MonoBehaviour:
   m_Active: 1
   settings:
     passTag: PropSegmentation
-    Event: 300
+    Event: 500
     filterSettings:
       RenderQueueType: 0
       LayerMask:
         serializedVersion: 2
-        m_Bits: 393216
+        m_Bits: 131072
       PassNames: []
     overrideMaterial: {fileID: 2100000, guid: 8ef00df1ffcd14f6cb1959a03cd627a4, type: 2}
     overrideMaterialPassIndex: 0
@@ -123,3 +124,42 @@ MonoBehaviour:
       restoreCamera: 1
       offset: {x: 0, y: 0, z: 0, w: 0}
       cameraFieldOfView: 70
+--- !u!114 &2563817713350259566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
+  m_Name: PropSegmentationTransparent
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    passTag: PropSegmentationTransparent
+    Event: 600
+    filterSettings:
+      RenderQueueType: 1
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 131072
+      PassNames: []
+    overrideMaterial: {fileID: 2100000, guid: 8ef00df1ffcd14f6cb1959a03cd627a4, type: 2}
+    overrideMaterialPassIndex: 0
+    overrideDepthState: 0
+    depthCompareFunction: 4
+    enableWrite: 1
+    stencilSettings:
+      overrideStencilState: 0
+      stencilReference: 0
+      stencilCompareFunction: 8
+      passOperation: 0
+      failOperation: 0
+      zFailOperation: 0
+    cameraSettings:
+      overrideCamera: 0
+      restoreCamera: 1
+      offset: {x: 0, y: 0, z: 0, w: 0}
+      cameraFieldOfView: 60

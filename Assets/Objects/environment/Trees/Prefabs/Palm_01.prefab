@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4590211134741006}
   - component: {fileID: 205557823479122812}
-  m_Layer: 17
+  m_Layer: 0
   m_Name: Palm_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 4351842160817564}
   - component: {fileID: 33200168467422702}
   - component: {fileID: 23843777350365382}
-  m_Layer: 17
+  m_Layer: 0
   m_Name: Palm_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 4556663440861136}
   - component: {fileID: 33890458534892234}
   - component: {fileID: 23338955538967662}
-  m_Layer: 17
+  m_Layer: 0
   m_Name: Palm_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
